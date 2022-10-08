@@ -18,6 +18,6 @@ urlpatterns = [
 
     path('users/<int:user_id>/', users),
     path('personal/', personal_info),
-    path(' users/<int:id>/change_password/', set_password)
+    path('users/<int:id>/change_password/', set_password)
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

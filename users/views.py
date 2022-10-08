@@ -77,6 +77,7 @@ def set_password(request, id):
         if form.is_valid():
             user.set_password(form.cleaned_data.get('password'))
             user.save()
+            return redirect('/')
         else:
             return render(request, 'users/set_password.html', context={
                 'form': SetPassForm,
